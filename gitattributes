@@ -1,0 +1,11 @@
+# Force GitHub's language bar to label these paths.
+# Real Dockerfile / .tf / .wat files are detected automatically;
+# these rules also let you relabel any other file inside the folders below.
+Dockerfile*      linguist-language=Dockerfile
+infra/**         linguist-language=HCL
+wasm/**          linguist-language=WebAssembly
+
+# Count them even if GitHub would normally treat them as data/config
+Dockerfile*      linguist-detectable=true
+infra/**         linguist-detectable=true
+wasm/**          linguist-detectable=true
